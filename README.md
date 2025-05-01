@@ -7,7 +7,6 @@ Welcome aboard! 🚀 Vibe is a Go-based CLI tool that leverages Google’s Gemin
 - **Flexible generation**: Create `.proto`, `schema.prisma`, or both in one go.
 - **Customizable models**: Pick your favorite Gemini model (default: `gemini-2.0-flash`).
 - **Smart extraction**: Automatically strips AI chat markdown, giving you clean code output.
-- **Easy integration**: Drop it into your CI/CD pipeline or run locally.
 
 ## 🚀 Getting Started
 
