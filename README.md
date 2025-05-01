@@ -74,10 +74,8 @@ vibe \
   ```bash
   export GOOGLE_API_KEY=YOUR_KEY_HERE
   ```
+  > To get key go to the https://aistudio.google.com/apikey
 - **Invalid generator type**: Use one of `proto`, `prisma`, or `both`.
 - **Go version issues**: Ensure you’re running Go 1.18 or newer.
 
 ---
-
-Happy coding! 🎉 If you hit any snags or have feature requests, feel free to open an issue or submit a PR on the Vibe repo. Let’s build the future of AI-assisted development together!
-
