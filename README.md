@@ -19,7 +19,7 @@ Welcome aboard! 🚀 Vibe is a Go-based CLI tool that leverages Google’s Gemin
 
 1. **Install**
    ```bash
-   go install github.com/Raezil/vibe
+   go install github.com/Raezil/vibe@latest
    ```
 
 ## 🛠️ Usage
