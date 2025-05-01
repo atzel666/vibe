@@ -1,4 +1,4 @@
-module main
+module github.com/Raezil/vibe
 
 go 1.23
 
