@@ -77,12 +77,6 @@ vibe \
 - **Invalid generator type**: Use one of `proto`, `prisma`, or `both`.
 - **Go version issues**: Ensure you’re running Go 1.18 or newer.
 
-## 🌱 Future Enhancements
-
-- Support for additional output formats (e.g., OpenAPI, TypeScript interfaces).
-- Interactive mode for step-by-step specification refinement.
-- Integration with other AI backends for broader model choices.
-
 ---
 
 Happy coding! 🎉 If you hit any snags or have feature requests, feel free to open an issue or submit a PR on the Vibe repo. Let’s build the future of AI-assisted development together!
