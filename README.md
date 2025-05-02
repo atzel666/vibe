@@ -1,4 +1,6 @@
-# Vibe CLI
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc832a3c-1b32-4ac0-b134-d9e11079c875" alt="centered image">
+</p>
 
 Welcome aboard! 🚀 Vibe is a Go-based CLI tool that leverages Google’s Gemini AI API to generate Protocol Buffer (`.proto`) files and Prisma schema (`.prisma`) files based on your specifications. Whether you’re architecting gRPC services, setting up a modern ORM layer, or exploring AI-driven code generation, Vibe has got your back.
 
